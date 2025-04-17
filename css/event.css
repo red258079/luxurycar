@@ -1,0 +1,130 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Times New Roman', Times, serif;
+  background-color: #fff;
+  color: #000;
+  font-size: large;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 50px;
+  position: fixed;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  z-index: 1000;
+}
+
+
+.logo{
+  display: flex;
+  align-items: center;
+}
+
+.logo a{
+  display: inline-block;
+}
+
+.logo img{
+  height: 100px;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.logo img:hover{
+  transform: scale(1.05) rotate(-2deg);
+  filter: brightness(1.2) drop-shadow(0 0 8px gold);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color: yellow;
+}
+
+
+.event-container {
+  padding: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.event {
+  display: flex;
+  gap: 24px;
+  background: white;
+  padding: 20px;
+  border-left: 6px solid #1a1a1a;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+  align-items: center;
+}
+.event:hover {
+  transform: translateY(-5px);
+  border-left-color: #d4af37;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+.event-img {
+  width: 300px;
+  height: 180px;
+  border-radius: 10px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+.event-content {
+  flex: 1;
+}
+.event-content h2 {
+  margin-top: 0;
+  color: #1a1a1a;
+}
+.event-content p {
+  margin: 10px 0;
+}
+.contact-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #d4af37;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+.contact-btn:hover {
+  background-color: #b89425;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+@media (max-width: 768px) {
+  .event {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .event-img {
+    width: 100%;
+    height: auto;
+  }
+}

@@ -1,0 +1,21 @@
+﻿.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.social-icon {
+    font-size: 15px;
+    color: #000;
+    text-decoration: none;
+    padding: 10px;
+}
+
+    .social-icon:hover {
+        color: #007bff; 
+    }
+
+    .social-icon i {
+        margin-right: 8px;
+    }

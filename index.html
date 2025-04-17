@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+  <link rel="stylesheet" href="css/stylehome.css">
+
+  <title>Luxury Car</title>
+  <link rel="icon" href="image/logo.png" type="image/png">
+</head>
+<header>
+  <div class="logo">
+    <a href="index.html">
+      <img src="image/logo.png" alt="Luxury Car Logo">
+    </a>
+  </div>
+  <div class="navbar">
+    <nav>
+      <ul> 
+        <li><a href="index.html">LuxuryCar</a></li>
+        <li><a href="html/pricelist/Mercedes-Benz-Vietnam-Pricelist-2.pdf" target="_blank">Bảng giá</a></li>
+        <li><a href="html/event/event.html">Khuyến mãi & sự kiện</a></li>
+        <li><a href="html/service/services.html">Dịch vụ</a></li>
+        <li><a href="html/oldcar/oldcar.html">Trao đổi xe cũ</a></li>
+        <div class="nav-search">
+          <input type="text" id="searchInput" class="search-box" oninput="handleSuggestions()" placeholder="Search..." />
+          <ul id="suggestionList"></ul>
+        </div>
+      </ul>
+    </nav>
+  </div>
+</header>
+   
+<section class="banner">
+  <div class="slide fade">
+    <img src="image/banner.png" alt="banner1">
+  </div>
+  <div class="slide fade">
+    <img src="image/banner2.png" alt="banner2">
+  </div>
+  <div class="slide fade">
+    <img src="image/banner3.png" alt="banner3">
+  </div>
+  <div class="slide fade">
+    <img src="image/banner4.png" alt="banner4">
+  </div>
+  <div class="slide fade">
+    <img src="image/banner5.png" alt="banner5">
+  </div>
+
+  <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+  <a class="next" onclick="changeSlide(1)">&#10095;</a>
+</section>
+
+  <section class="container">
+    <div class="car">
+      <p>Các dòng xe đang mở bán</p>
+      <a href="html/eq/mercedeseq.html"><img src="image/merceq.png" alt="Mercedes-Benz EQ"></a>
+      <a href="html/amg/mercedesamg.html"><img src="image/mercamg.png" alt="Mercedes-Benz AMG"></a>
+      <a href="html/maybach/mercedesmaybach.html"><img src="image/MAYBACH.png" alt="Mercedes-Benz MAYBACH"></a>
+    </div>
+
+    <div class="title">
+      <h3><span>CÁC DÒNG XE PHỔ BIẾN</span></h3>
+    </div>
+
+    <div id="blur">Mercedes-Benz GLC</div>
+    <div class="car-grid">
+      <div class="car-item" id="glc-300-couple">
+        <a href="popularCar/GLC300.html"><img src="image/glc300couple.png" alt="GLC 300 4MATIC COUPLE"></a>
+        <h2>GLC 300 4MATIC COUPLE</h2>
+        <p>Giá từ: 3.129.000.000 VNĐ</p>
+        <button onclick="addToCompare(
+          'GLC 300 4MATIC Couple',
+          'image/glc300couple.png',
+          '3.129.000.000 VNĐ',
+          '258 HP',
+          '2.0L I4 Turbo',
+          '7.0L/100km',
+          '4.732 x 1.890 x 1.600 mm',
+          '5 chỗ'
+        )">Thêm vào so sánh</button>        
+      </div>
+      <div class="car-item" id="glc-300-4matic">
+        <a href="popularCar/glc300-254.html"><img src="image/glc300suv.png" alt="GLC 300 4MATIC"></a>
+        <h2>GLC 300 4MATIC (X254)</h2>
+        <p>Giá từ: 2.799.000.000 VNĐ</p>
+        <button onclick="addToCompare(
+          'GLC 300 4MATIC (X254)',
+          'image/glc300suv.png',
+          '2.799.000.000 VNĐ',
+          '258 HP',
+          '2.0L I4 Turbo Mild Hybrid',
+          '7.3L/100km',
+          '4.716 x 1.934 x 1.640 mm',
+          '5 chỗ'
+          )">Thêm vào so sánh</button>
+
+      </div>
+      <div class="car-item" id="glc-200-4matic">
+        <a href="popularCar/glc200.html"><img src="image/glc200.png" alt="GLC 200 4MATIC"></a>
+        <h2>GLC 200 4MATIC (X254)</h2>
+        <p>Giá từ: 3.299.000.000 VNĐ</p>
+        <button onclick="addToCompare(
+          'GLC 200 4MATIC (X254)',
+          'image/glc200.png',
+          '3.299.000.000 VNĐ',
+          '204 HP',
+          '2.0L I4 Turbo Mild Hybrid',
+          '7.8L/100km',
+          '4.716 x 1.934 x 1.640 mm',
+          '5 chỗ'
+          )">Thêm vào so sánh</button>
+      </div>
+    </div>
+
+    <div id="blur">Mercedes-Benz E-Class</div>
+    <div class="car-grid">
+      <div class="car-item" id="e-300-amg">
+        <a href="popularCar/e300.html"><img src="image/e300.png" alt="E 300 AMG"></a>
+        <h2>E 300 AMG</h2>
+        <p>Giá từ: 2.950.000.000 VNĐ</p>
+        <button onclick="addToCompare(
+          'E 300 AMG',
+          'image/e300.png',
+          '2.950.000.000 VNĐ',
+          '258 HP',
+          '2.0L I4 Turbo',
+          '7.2L/100km',
+          '4.950 x 1.860 x 1.460 mm',
+          '5 chỗ'
+        )">Thêm vào so sánh</button>
+
+      </div>
+      <div class="car-item" id="e-200-exclusive">
+        <a href="popularCar/e200.html"><img src="image/e200.png" alt="E 200 Exclusive"></a>
+        <h2>E 200 Exclusive</h2>
+        <p>Giá từ: 2.390.000.000 VNĐ</p>
+        <button onclick="addToCompare(
+          'E 200 Exclusive',
+          'image/e200.png',
+          '2.390.000.000 VNĐ',
+          '197 HP',
+          '2.0L I4 Turbo',
+          '7.0L/100km',
+          '4.950 x 1.860 x 1.460 mm',
+          '5 chỗ'
+        )">Thêm vào so sánh</button>
+
+      </div>
+      <div class="car-item" id="e-180">
+        <a href="popularCar/e180.html"><img src="image/e180.png" alt="E 180"></a>
+        <h2>E 180</h2>
+        <p>Giá từ: 2.090.000.000 VNĐ</p>
+        <button onclick="addToCompare(
+          'E 180',
+          'image/e180.png',
+          '2.090.000.000 VNĐ',
+          '156 HP',
+          '1.5L I4 Turbo',
+          '6.5L/100km',
+          '4.950 x 1.860 x 1.460 mm',
+          '5 chỗ'
+        )">Thêm vào so sánh</button>
+      </div>
+    </div>
+
+    <div id="blur">Mercedes-Benz C-Class</div>
+    <div class="car-grid">
+      <div class="car-item" id="amg-c43-4matic">
+        <a href="popularCar/amgc43.html"><img src="image/amgc43.png" alt="AMG C43 4Matic"></a>
+        <h2>AMG C43 4MATIC</h2>
+        <p>Giá từ: 2.599.000.000 VNĐ</p>
+        <button onclick="addToCompare(
+          'AMG C43 4MATIC',
+          'image/amgc43.png',
+          '2.599.000.000 VNĐ',
+          '390 HP',
+          '3.0L V6 Bi-Turbo',
+          '9.0L/100km',
+          '4.686 x 1.810 x 1.442 mm',
+          '5 chỗ'
+        )">Thêm vào so sánh</button>
+      </div>
+      <div class="car-item" id="c-300-amg">
+        <a href="popularCar/c300.html"><img src="image/c300amg.png" alt="C 300 AMG"></a>
+        <h2>C 300 AMG (CKD)</h2>
+        <p>Giá từ: 2.390.000.000 VNĐ</p>
+        <button onclick="addToCompare(
+            'C 300 AMG (CKD)',
+            'image/c300amg.png',
+            '2.199.000.000 VNĐ',
+            '258 HP',
+            '2.0L I4 Turbo',
+            '9.07L/100km',
+            '4.751 x 1.890 x 1.438 mm',
+            '5 chỗ'
+          )">Thêm vào so sánh</button>
+      </div>
+      <div class="car-item" id="c-200-avantgarde-plus">
+        <a href="popularCar/c200.html"><img src="image/c200.png" alt="C 200 Avantgarde Plus"></a>
+        <h2>C 200 Avantgarde Plus</h2>
+        <p>Giá từ: 1.849.000.000 VNĐ</p>
+        <button onclick="addToCompare(
+          'C 200 Avantgarde Plus',
+          'image/c200.png',
+          '1.849.000.000 VNĐ',
+          '204 HP',
+          '1.5L I4 Turbo',
+          '7.3L/100km',
+          '4.751 x 1.890 x 1.437 mm',
+          '5 chỗ'
+        )">Thêm vào so sánh</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="promotion">
+    <div class="promotion-content">
+      <h1>Khuyến mãi & ưu đãi</h1>
+      <p>Quà tặng dành cho khách hàng gửi yêu cầu báo giá online</p>
+      <p><em>* Quý khách vui lòng liên hệ hotline tư vấn, nhận thông tin khuyến mãi và ưu đãi</em></p>
+    </div>
+    <div class="hotline">
+      <a href="tel:0387857338">Hotline: 0887857338</a>
+    </div>
+  </section>
+
+  <section class="info">
+    <div class="infomation">
+      <h2>LuxuryCar</h2>
+      <p>Showroom Mercedes-Benz Bình Dương.</p>
+      <p>Địa chỉ: Số 4 The Canary, Đại lộ Bình Dương, Bình Hòa, Thuận An, Bình Dương</p>
+    </div>
+
+    <div class="support">
+      <h2>Hỗ trợ khách hàng</h2>
+      <a href="tel:0387857338">Hotline: 0387857338</a>
+      <p>Email: 23050076@student.bdu.edu.vn</p>
+    </div>
+
+    <div class="follow">
+      <h2>Follow</h2>
+      <div class="social-icons">
+        <a href="mailto:23050076@student.bdu.edu.vn" class="icon"><img src="image/email.png" alt="Email"></a>
+        <a href="tel:0387857338" class="icon"><img src="image/phone.png" alt="Phone"></a>
+        <a href="https://www.youtube.com/@MercedesBenz" class="icon" target="_blank"><img src="image/youtube.png" alt="YouTube"></a>
+    </div>   
+  </section>
+
+  <button id="scrollToTop" class="scroll-to-top" onclick="scrollToTop">
+    <i class="fa-solid fa-circle-arrow-up"></i>
+  </button>
+
+ 
+    <div id="compare-bar" class="compare-bar">
+      <div id="compare-items" class="compare-items"></div>
+      <div class="compare-actions">
+      <button onclick="compareNow()">So sánh ngay</button>
+      <button onclick="clearCompare()">  Xóa tất cả</button>
+      </div>
+    </div>
+
+    <div id="compare-modal" class="compare-modal hidden">
+      <div class="compare-content">
+        <span class="close-btn" onclick="closeCompareModal()">×</span>
+        <h2>So sánh các xe đã chọn</h2>
+        <div id="compare-popup-table"></div>
+      </div>
+    </div>
+
+  <script src="js/banner.js"></script>
+  <script src="js/ontop.js"></script>
+  <script src="js/suggestion.js"></script>
+  <script src="js/compare.js"></script>
+</body>
+</html>
